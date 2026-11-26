@@ -1,0 +1,20 @@
+{
+  "name": "mindbridge",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Thai-first education support platform and isolated competition demo",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "dev": "node --watch --env-file-if-exists=.env server.mjs",
+    "check": "node scripts/check.mjs",
+    "build": "node scripts/check.mjs",
+    "test": "node --test tests/api.test.mjs",
+    "test:browser": "node --env-file-if-exists=.env tests/browser.mjs",
+    "test:admin": "node --env-file-if-exists=.env tests/admin-browser.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}
